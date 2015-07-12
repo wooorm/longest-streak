@@ -1,0 +1,36 @@
+{
+  "name": "longest-streak",
+  "main": "longest-streak.js",
+  "description": "Count the longest repeating streak of a character",
+  "license": "MIT",
+  "keywords": [
+    "count",
+    "length",
+    "longest",
+    "repeating",
+    "streak",
+    "character"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wooorm/longest-streak.git"
+  },
+  "authors": [
+    "Titus Wormer <tituswormer@gmail.com>"
+  ],
+  "ignore": [
+    ".*",
+    "*.log",
+    "*.md",
+    "build/",
+    "components/",
+    "coverage/",
+    "node_modules/",
+    "build.js",
+    "example.js",
+    "index.js",
+    "test.js",
+    "component.json",
+    "package.json"
+  ]
+}
