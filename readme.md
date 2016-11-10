@@ -17,15 +17,9 @@ and for AMD, CommonJS, and globals ([uncompressed](longest-streak.js) and
 
 ## Usage
 
-Dependencies.
-
 ```javascript
 var longestStreak = require('longest-streak');
-```
 
-Process:
-
-```javascript
 longestStreak('` foo `` bar `', '`') // 2
 ```
 
