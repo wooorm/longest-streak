@@ -1,35 +1,31 @@
 'use strict';
 
-/* eslint-env mocha */
-
-var assert = require('assert');
+var test = require('tape');
 var longestStreak = require('./');
 
-describe('longestStreak(value, character)', function () {
-  it('should coerce to string', function () {
-    assert.equal(longestStreak(true, 't'), 1);
-  });
+test('longestStreak(value, character)', function (t) {
+  t.equal(longestStreak(true, 't'), 1, 'should coerce to string');
 
-  it('should throw when character is invalid', function () {
-    assert.throws(
-      function () {
-        longestStreak(true, 0);
-      },
-      /Expected character/
-    );
+  t.throws(
+    function () {
+      longestStreak(true, 0);
+    },
+    /Expected character/,
+    'should throw when character is invalid (non-string)'
+  );
 
-    assert.throws(
-      function () {
-        longestStreak(true, 'incorrect');
-      },
-      /Expected character/
-    );
-  });
+  t.throws(
+    function () {
+      longestStreak(true, 'incorrect');
+    },
+    /Expected character/,
+    'should throw when character is invalid (too long string)'
+  );
 
-  it('should work', function () {
-    assert.equal(longestStreak('', 'f'), '');
-    assert.equal(longestStreak('foo', 'o'), 2);
-    assert.equal(longestStreak('fo fooo fo', 'o'), 3);
-    assert.equal(longestStreak('ooo', 'o'), 3);
-  });
+  t.equal(longestStreak('', 'f'), 0, 'should work (1)');
+  t.equal(longestStreak('foo', 'o'), 2, 'should work (2)');
+  t.equal(longestStreak('fo fooo fo', 'o'), 3, 'should work (3)');
+  t.equal(longestStreak('ooo', 'o'), 3, 'should work (4)');
+
+  t.end();
 });
