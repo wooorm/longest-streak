@@ -1,46 +1,59 @@
-# longest-streak [![Build Status](https://img.shields.io/travis/wooorm/longest-streak.svg?style=flat)](https://travis-ci.org/wooorm/longest-streak) [![Coverage Status](https://img.shields.io/coveralls/wooorm/longest-streak.svg?style=flat)](https://coveralls.io/r/wooorm/longest-streak?branch=master)
+# longest-streak [![Build Status][travis-badge]][travis] [![Coverage Status][codecov-badge]][codecov]
 
 Count the longest repeating streak of a character.
 
 ## Installation
 
-[npm](https://docs.npmjs.com/cli/install):
+[npm][]:
 
 ```bash
 npm install longest-streak
 ```
 
-**longest-streak** is also available for [bower](http://bower.io/#install-packages),
-[component](https://github.com/componentjs/component), [duo](http://duojs.org/#getting-started),
-and for AMD, CommonJS, and globals ([uncompressed](longest-streak.js) and
-[compressed](longest-streak.min.js)).
-
 ## Usage
 
-```javascript
+```js
 var longestStreak = require('longest-streak');
 
-longestStreak('` foo `` bar `', '`') // 2
+longestStreak('` foo `` bar `', '`') //=> 2
 ```
 
 ## API
 
-### longestStreak(value, character)
+### `longestStreak(value, character)`
 
 Get the count of the longest repeating streak of `character` in `value`.
 
-Parameters:
+###### Parameters
 
 *   `value` (`string`) — Content, coerced to string.
 *   `character` (`string`) — Single character to look for.
 
-Returns: `number` — Number of characters at the place where `character`
-occurs in its longest streak in `value`.
+###### Returns
 
-Throws:
+`number` — Number of characters at the place where `character` occurs in
+its longest streak in `value`.
+
+###### Throws
 
 *   `Error` — when `character` is not a single character string.
 
 ## License
 
-[MIT](LICENSE) @ [Titus Wormer](http://wooorm.com)
+[MIT][license] © [Titus Wormer][author]
+
+<!-- Definitions -->
+
+[travis-badge]: https://img.shields.io/travis/wooorm/longest-streak.svg
+
+[travis]: https://travis-ci.org/wooorm/longest-streak
+
+[codecov-badge]: https://img.shields.io/codecov/c/github/wooorm/longest-streak.svg
+
+[codecov]: https://codecov.io/github/wooorm/longest-streak
+
+[npm]: https://docs.npmjs.com/cli/install
+
+[license]: LICENSE
+
+[author]: http://wooorm.com
