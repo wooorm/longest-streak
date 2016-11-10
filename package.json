@@ -11,15 +11,16 @@
     "streak",
     "character"
   ],
-  "files": [
-    "index.js",
-    "LICENSE"
+  "repository": "https://github.com/wooorm/afinn-111",
+  "bugs": "https://github.com/wooorm/afinn-111/issues",
+  "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
+  "contributors": [
+    "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wooorm/longest-streak.git"
-  },
-  "author": "Titus Wormer <tituswormer@gmail.com>",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {},
   "devDependencies": {
     "browserify": "^10.0.0",
     "esmangle": "^1.0.0",
@@ -30,12 +31,11 @@
     "xo": "^0.17.0"
   },
   "scripts": {
-    "lint": "xo",
-    "make": "npm run lint && npm run test-coverage",
-    "build-md": "remark . --output --quiet --frail",
+    "build-md": "remark . --quiet --frail",
     "build-bundle": "browserify index.js --bare -s longestStreak > longest-streak.js",
-    "postbuild-bundle": "esmangle longest-streak.js > longest-streak.min.js",
-    "build": "npm run build-md && npm run build-bundle",
+    "build-mangle": "esmangle longest-streak.js > longest-streak.min.js",
+    "build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+    "lint": "xo",
     "test-api": "node test",
     "test-coverage": "nyc --reporter lcov tape test.js",
     "test": "npm run build && npm run lint && npm run test-coverage"
