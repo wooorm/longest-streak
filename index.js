@@ -8,26 +8,29 @@ module.exports = longestStreak;
 function longestStreak(value, character) {
   var count = 0;
   var maximum = 0;
-  var index = -1;
-  var length;
-
-  value = String(value);
-  length = value.length;
+  var expected = 0;
+  var index;
 
   if (typeof character !== 'string' || character.length !== 1) {
     throw new Error('Expected character');
   }
 
-  while (++index < length) {
-    if (value.charAt(index) === character) {
-      count++;
+  value = String(value);
+  index = value.indexOf(character, expected);
 
+  while (index !== -1) {
+    count++;
+
+    if (index === expected) {
       if (count > maximum) {
         maximum = count;
       }
     } else {
-      count = 0;
+      count = 1;
     }
+
+    expected = index + 1;
+    index = value.indexOf(character, expected);
   }
 
   return maximum;
