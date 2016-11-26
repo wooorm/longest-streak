@@ -8,7 +8,7 @@ module.exports = longestStreak;
 function longestStreak(value, character) {
   var count = 0;
   var maximum = 0;
-  var expected = 0;
+  var expected;
   var index;
 
   if (typeof character !== 'string' || character.length !== 1) {
@@ -16,7 +16,7 @@ function longestStreak(value, character) {
   }
 
   value = String(value);
-  index = value.indexOf(character, expected);
+  expected = index = value.indexOf(character);
 
   while (index !== -1) {
     count++;

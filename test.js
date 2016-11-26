@@ -33,5 +33,7 @@ test('longestStreak(value, character)', function (t) {
   t.equal(longestStreak('fo fooooo fooo', 'o'), 5, 'should work (9)');
   t.equal(longestStreak('fo fooooo fooooo', 'o'), 5, 'should work (10)');
 
+  t.equal(longestStreak('\'`\'', '`'), 1, 'should match on one');
+
   t.end();
 });
