@@ -16,7 +16,8 @@ function longestStreak(value, character) {
   }
 
   value = String(value);
-  expected = index = value.indexOf(character);
+  index = value.indexOf(character);
+  expected = index;
 
   while (index !== -1) {
     count++;
