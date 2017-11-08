@@ -11,8 +11,8 @@
     "streak",
     "character"
   ],
-  "repository": "https://github.com/wooorm/afinn-111",
-  "bugs": "https://github.com/wooorm/afinn-111/issues",
+  "repository": "wooorm/longest-streak",
+  "bugs": "https://github.com/wooorm/longest-streak/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "contributors": [
     "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
