@@ -13,9 +13,9 @@ npm install longest-streak
 ## Usage
 
 ```js
-var longestStreak = require('longest-streak');
+var longestStreak = require('longest-streak')
 
-longestStreak('` foo `` bar `', '`') //=> 2
+longestStreak('` foo `` bar `', '`') // => 2
 ```
 
 ## API
