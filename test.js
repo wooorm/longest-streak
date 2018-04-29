@@ -1,7 +1,7 @@
 'use strict';
 
 var test = require('tape');
-var longestStreak = require('./');
+var longestStreak = require('.');
 
 test('longestStreak(value, character)', function (t) {
   t.equal(longestStreak(true, 't'), 1, 'should coerce to string');
