@@ -1,4 +1,9 @@
-# longest-streak [![Build Status][travis-badge]][travis] [![Coverage Status][codecov-badge]][codecov]
+# longest-streak
+
+[![Build][build-badge]][build]
+[![Coverage][coverage-badge]][coverage]
+[![Downloads][downloads-badge]][downloads]
+[![Size][size-badge]][size]
 
 Count the longest repeating streak of a character.
 
@@ -44,13 +49,21 @@ its longest streak in `value`.
 
 <!-- Definitions -->
 
-[travis-badge]: https://img.shields.io/travis/wooorm/longest-streak.svg
+[build-badge]: https://img.shields.io/travis/wooorm/longest-streak.svg
 
-[travis]: https://travis-ci.org/wooorm/longest-streak
+[build]: https://travis-ci.org/wooorm/longest-streak
 
-[codecov-badge]: https://img.shields.io/codecov/c/github/wooorm/longest-streak.svg
+[coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/longest-streak.svg
 
-[codecov]: https://codecov.io/github/wooorm/longest-streak
+[coverage]: https://codecov.io/github/wooorm/longest-streak
+
+[downloads-badge]: https://img.shields.io/npm/dm/longest-streak.svg
+
+[downloads]: https://www.npmjs.com/package/longest-streak
+
+[size-badge]: https://img.shields.io/bundlephobia/minzip/longest-streak.svg
+
+[size]: https://bundlephobia.com/result?p=longest-streak
 
 [npm]: https://docs.npmjs.com/cli/install
 
