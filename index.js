@@ -1,10 +1,8 @@
 'use strict'
 
-/* Expose. */
 module.exports = longestStreak
 
-/* Get the count of the longest repeating streak of
- * `character` in `value`. */
+// Get the count of the longest repeating streak of `character` in `value`.
 function longestStreak(value, character) {
   var count = 0
   var maximum = 0
