@@ -1,15 +1,15 @@
 language: node_js
 node_js:
-- lts/boron
-- node
+  - lts/dubnium
+  - node
 after_script: bash <(curl -s https://codecov.io/bash)
 deploy:
   provider: releases
   skip_cleanup: true
   api_key:
-    secure: grCgDmYpTeTm5kE8/avZj8OU60yqufLsLfOsT3GLwRJRwW5Fk1lkLEvSrewe/8gikxkyj7fyViaxIaQcANjldAb56J7FTrlKwWfFnl43ntKYX4vRCoOT9dhi076QJysAhh+cXhmyR70AcQ27R3+4Fqf93Ei2YVRcBGXRxRh2cqMV9MwohMtYhdaiNVk4ay0zP1a6ISkQ8bLYm/Q32rrr+IifN0oHLII7jYct+bGZQW6l2Fg6uZnIa2mE/GVXQNmD/TqzeUQQCL7MR1psl/TnEaqH1CLYF+eysETvQwpuKtt1dqX7sTEmNIs4zGZEV2pYDVRsZgDR4CpEXikEC5Kk4GQfEVDdfqeKFZ0ZUVUaKqcF2/hSqHTnXzAmg5sSATkCwtUiEzBDikYNce5C4guQA0QeJI0hq1KMYWrFsGHxsPL9Kd9qaB1awn7QZhd1mQ55VWlqI4JRKKxB3s8+rwHVbPIeJIcdwBtikjUw2e41zyXWPXBtxOwLrO5WuaSE+ODMIqSD65dF6cL+VBznxAzLo+xD/Dha1cB4pvC40GBquElju+Nek8o421TSp7IGxH98vX37iXWeRWhvRJpiTTfp70bKdwdE29v6fO7gvW99j8h9e565+IHwd4gv7Nd/8uQ9NP169lVtpqyLRVQGXf58knsMGFOGTR3/jjChfF9u3pE=
+    secure: XJdQFM8uRUNf7LBmJvyXJFiEsIynrwhABTyv85Y07DbNtW3wHdnVc5gbCiCmLAf/R9l4EJa3+cH6MV7d4dksEWwOL++WPhISVcU3mbrf4/YdjBdTHqACCvHRFSiLqMSW0TXePynmHkFjSg9XeqjKwFomQE2MLcHkd6kX/r6lt8vM3ekWBUHcYoRqVu2FxRMeqX06A0bwf7h423Zb8dO8y+WTsYXf2p70jPYUjOJFzIz6wIWs6KFUfwxSTkheogKpfII+O2LBb3JNiKPr0Te8VPxDf2W1lfAcx0GqZnkEVMjDExIUYjM5OP9XrzmQdrVKrzb28llP8jSKo0ZSpSXWw23UhLXtn2WgKUxXNA7kqtR2TN+T9yahjVgU/0McLpWRbrw6HoQ1ResnSQETl98yd5drnk5BgWRaxx9FI1T1UEJRXxPsp6ZKDtmclBQicwV5MWraBzn98ebmHxzZFK6kGZWFoBFVf0pM+PzRmA8TTgGrGt/GWpWM+uS+6l1xBHPgaKlBqHN+JzxWExIoKk/TCRL9SIHkSBg78nQZEKBUEZkeMfy8qopZt3XNcx7Qss3jp9uFuXYdjTbfCqYuc4r0U6KC+iNROGXHgq04/Dz1iN8Wj3SCZJQBiTkZwRvUU7zg81FCT5mrTsPQs+WeU3WrBA5v0cA5c7m45J7fh0ixNug=
   file:
-    - "longest-streak.js"
-    - "longest-streak.min.js"
+    - 'longest-streak.js'
+    - 'longest-streak.min.js'
   on:
     tags: true
