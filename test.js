@@ -3,11 +3,11 @@
 var test = require('tape')
 var longestStreak = require('.')
 
-test('longestStreak(value, character)', function(t) {
+test('longestStreak(value, character)', function (t) {
   t.equal(longestStreak(true, 't'), 1, 'should coerce to string')
 
   t.throws(
-    function() {
+    function () {
       longestStreak(true, 0)
     },
     /Expected character/,
@@ -15,7 +15,7 @@ test('longestStreak(value, character)', function(t) {
   )
 
   t.throws(
-    function() {
+    function () {
       longestStreak(true, 'incorrect')
     },
     /Expected character/,

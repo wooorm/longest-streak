@@ -1,3 +1,5 @@
 coverage/
 longest-streak.js
 longest-streak.min.js
+*.md
+*.json
