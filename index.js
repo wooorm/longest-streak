@@ -3,26 +3,21 @@
 module.exports = longestStreak
 
 // Get the count of the longest repeating streak of `character` in `value`.
-function longestStreak(value, character) {
+function longestStreak(source, character) {
+  var value = String(source)
+  var index = value.indexOf(character)
+  var expected = index
   var count = 0
-  var maximum = 0
-  var expected
-  var index
+  var max = 0
 
   if (typeof character !== 'string' || character.length !== 1) {
     throw new Error('Expected character')
   }
 
-  value = String(value)
-  index = value.indexOf(character)
-  expected = index
-
   while (index !== -1) {
-    count++
-
     if (index === expected) {
-      if (count > maximum) {
-        maximum = count
+      if (++count > max) {
+        max = count
       }
     } else {
       count = 1
@@ -32,5 +27,5 @@ function longestStreak(value, character) {
     index = value.indexOf(character, expected)
   }
 
-  return maximum
+  return max
 }
