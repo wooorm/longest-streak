@@ -1,7 +1,5 @@
-'use strict'
-
-var test = require('tape')
-var longestStreak = require('.')
+import test from 'tape'
+import {longestStreak} from './index.js'
 
 test('longestStreak(value, character)', function (t) {
   t.equal(longestStreak(true, 't'), 1, 'should coerce to string')

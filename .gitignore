@@ -1,8 +1,5 @@
 .DS_Store
 *.log
-.nyc_output/
 coverage/
 node_modules/
-longest-streak.js
-longest-streak.min.js
 yarn.lock

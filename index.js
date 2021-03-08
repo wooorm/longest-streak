@@ -1,9 +1,5 @@
-'use strict'
-
-module.exports = longestStreak
-
 // Get the count of the longest repeating streak of `character` in `value`.
-function longestStreak(source, character) {
+export function longestStreak(source, character) {
   var value = String(source)
   var index = value.indexOf(character)
   var expected = index
