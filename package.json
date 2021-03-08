@@ -60,10 +60,7 @@
   },
   "xo": {
     "prettier": true,
-    "esnext": false,
-    "ignores": [
-      "longest-streak.js"
-    ]
+    "esnext": false
   },
   "remarkConfig": {
     "plugins": [
