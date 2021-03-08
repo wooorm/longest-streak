@@ -2,11 +2,13 @@ import test from 'tape'
 import {longestStreak} from './index.js'
 
 test('longestStreak(value, character)', function (t) {
+  // @ts-ignore runtime
   t.equal(longestStreak(true, 't'), 1, 'should coerce to string')
 
   t.throws(
     function () {
-      longestStreak(true, 0)
+      // @ts-ignore runtime
+      longestStreak('', 0)
     },
     /Expected character/,
     'should throw when character is invalid (non-string)'
@@ -14,7 +16,7 @@ test('longestStreak(value, character)', function (t) {
 
   t.throws(
     function () {
-      longestStreak(true, 'incorrect')
+      longestStreak('', 'incorrect')
     },
     /Expected character/,
     'should throw when character is invalid (too long string)'

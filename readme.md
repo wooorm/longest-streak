@@ -42,8 +42,7 @@ Get the count of the longest repeating streak of `character` in `value`.
 
 ###### Returns
 
-`number` — Number of characters at the place where `character` occurs in
-its longest streak in `value`.
+`number` — Count of most frequent adjacent `character`s in `value`
 
 ###### Throws
 

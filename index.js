@@ -1,7 +1,13 @@
-// Get the count of the longest repeating streak of `character` in `value`.
-export function longestStreak(source, character) {
-  var value = String(source)
-  var index = value.indexOf(character)
+/**
+ * Get the count of the longest repeating streak of `character` in `value`.
+ *
+ * @param {string} value Content.
+ * @param {string} character Single character to look for
+ * @returns {number} Count of most frequent adjacent `character`s in `value`
+ */
+export function longestStreak(value, character) {
+  var source = String(value)
+  var index = source.indexOf(character)
   var expected = index
   var count = 0
   var max = 0
@@ -20,7 +26,7 @@ export function longestStreak(source, character) {
     }
 
     expected = index + 1
-    index = value.indexOf(character, expected)
+    index = source.indexOf(character, expected)
   }
 
   return max
