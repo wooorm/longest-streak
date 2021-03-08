@@ -49,9 +49,9 @@ its longest streak in `value`.
 
 <!-- Definitions -->
 
-[build-badge]: https://img.shields.io/travis/wooorm/longest-streak.svg
+[build-badge]: https://github.com/wooorm/longest-streak/workflows/main/badge.svg
 
-[build]: https://travis-ci.org/wooorm/longest-streak
+[build]: https://github.com/wooorm/longest-streak/actions
 
 [coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/longest-streak.svg
 
