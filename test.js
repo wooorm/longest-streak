@@ -2,12 +2,12 @@ import test from 'tape'
 import {longestStreak} from './index.js'
 
 test('longestStreak(value, character)', function (t) {
-  // @ts-ignore runtime
+  // @ts-expect-error Incorrect `value`.
   t.equal(longestStreak(true, 't'), 1, 'should coerce to string')
 
   t.throws(
     function () {
-      // @ts-ignore runtime
+      // @ts-expect-error Incorrect `character`.
       longestStreak('', 0)
     },
     /Expected character/,
