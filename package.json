@@ -1,6 +1,6 @@
 {
   "name": "longest-streak",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Count the longest repeating streak of a character",
   "license": "MIT",
   "keywords": [
