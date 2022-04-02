@@ -29,17 +29,17 @@ In Node.js (version 12.20+, 14.14+, or 16.0+), install with [npm][]:
 npm install longest-streak
 ```
 
-In Deno with [Skypack][]:
+In Deno with [`esm.sh`][esmsh]:
 
 ```js
-import {longestStreak} from 'https://cdn.skypack.dev/longest-streak@3?dts'
+import {longestStreak} from 'https://esm.sh/longest-streak@3'
 ```
 
-In browsers with [Skypack][]:
+In browsers with [`esm.sh`][esmsh]:
 
 ```html
 <script type="module">
-  import {longestStreak} from 'https://cdn.skypack.dev/longest-streak@3?min'
+  import {longestStreak} from 'https://esm.sh/longest-streak@3?bundle'
 </script>
 ```
 
@@ -123,7 +123,7 @@ See [How to Contribute to Open Source][contribute].
 
 [npm]: https://docs.npmjs.com/cli/install
 
-[skypack]: https://www.skypack.dev
+[esmsh]: https://esm.sh
 
 [license]: license
 
