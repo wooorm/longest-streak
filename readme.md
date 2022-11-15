@@ -9,6 +9,8 @@ Get the count of the longest repeating streak of `substring` in `value`.
 
 ## Contents
 
+*   [What is this?](#what-is-this)
+*   [When should I use this?](#when-should-i-use-this)
 *   [Install](#install)
 *   [Use](#use)
 *   [API](#api)
@@ -20,10 +22,23 @@ Get the count of the longest repeating streak of `substring` in `value`.
 *   [Contribute](#contribute)
 *   [License](#license)
 
+## What is this?
+
+This is a tiny package that finds the count of the longest adjacent repeating
+substring.
+
+## When should I use this?
+
+This package is rather niche.
+I use it for serializing markdown ASTs (particularly fenced code and math).
+
+You can use [`ccount`][ccount] if you need the total count of substrings
+occuring in a value.
+
 ## Install
 
 This package is [ESM only][esm].
-In Node.js (version 12.20+, 14.14+, or 16.0+), install with [npm][]:
+In Node.js (version 14.14+, 16.0+), install with [npm][]:
 
 ```sh
 npm install longest-streak
@@ -53,7 +68,7 @@ longestStreak('` foo `` bar `', '`') // => 2
 
 ## API
 
-This package exports the following identifiers: `longestStreak`.
+This package exports the identifier `longestStreak`.
 There is no default export.
 
 ### `longestStreak(value, substring)`
@@ -72,11 +87,12 @@ Count of most frequent adjacent `substring`s in `value` (`number`).
 ## Types
 
 This package is fully typed with [TypeScript][].
+It exports no additional types.
 
 ## Compatibility
 
 This package is at least compatible with all maintained versions of Node.js.
-As of now, that is Node.js 12.20+, 14.14+, and 16.0+.
+As of now, that is Node.js 14.14+ and 16.0+.
 It also works in Deno and modern browsers.
 
 ## Security
@@ -130,3 +146,5 @@ See [How to Contribute to Open Source][contribute].
 [typescript]: https://www.typescriptlang.org
 
 [contribute]: https://opensource.guide/how-to-contribute/
+
+[ccount]: https://github.com/wooorm/ccount
