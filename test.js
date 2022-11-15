@@ -2,25 +2,17 @@ import assert from 'node:assert/strict'
 import test from 'node:test'
 import {longestStreak} from './index.js'
 
-test('longestStreak(value, character)', function () {
+test('longestStreak(value, substring)', function () {
   // @ts-expect-error Incorrect `value`.
   assert.equal(longestStreak(true, 't'), 1, 'should coerce to string')
 
   assert.throws(
     function () {
-      // @ts-expect-error Incorrect `character`.
+      // @ts-expect-error Incorrect `substring`.
       longestStreak('', 0)
     },
-    /Expected character/,
-    'should throw when character is invalid (non-string)'
-  )
-
-  assert.throws(
-    function () {
-      longestStreak('', 'incorrect')
-    },
-    /Expected character/,
-    'should throw when character is invalid (too long string)'
+    /Expected substring/,
+    'should throw when substring is invalid (non-string)'
   )
 
   assert.equal(longestStreak('', 'f'), 0, 'should work (1)')
@@ -35,4 +27,11 @@ test('longestStreak(value, character)', function () {
   assert.equal(longestStreak('fo fooooo fooooo', 'o'), 5, 'should work (10)')
 
   assert.equal(longestStreak("'`'", '`'), 1, 'should match on one')
+
+  assert.equal(longestStreak('👨‍👩‍👧‍👦👨‍👩‍👧‍👦', '👨‍👩‍👧‍👦'), 2, 'should match complex emoji (1)')
+  assert.equal(
+    longestStreak('👨‍👩‍👧‍👦a👨‍👩‍👧‍👦', '👨‍👩‍👧‍👦'),
+    1,
+    'should match complex emoji (2)'
+  )
 })

@@ -5,14 +5,14 @@
 [![Downloads][downloads-badge]][downloads]
 [![Size][size-badge]][size]
 
-Get the count of the longest repeating streak of `character` in `value`.
+Get the count of the longest repeating streak of `substring` in `value`.
 
 ## Contents
 
 *   [Install](#install)
 *   [Use](#use)
 *   [API](#api)
-    *   [`longestStreak(value, character)`](#longeststreakvalue-character)
+    *   [`longestStreak(value, substring)`](#longeststreakvalue-substring)
 *   [Types](#types)
 *   [Compatibility](#compatibility)
 *   [Security](#security)
@@ -56,22 +56,18 @@ longestStreak('` foo `` bar `', '`') // => 2
 This package exports the following identifiers: `longestStreak`.
 There is no default export.
 
-### `longestStreak(value, character)`
+### `longestStreak(value, substring)`
 
-Get the count of the longest repeating streak of `character` in `value`.
+Get the count of the longest repeating streak of `substring` in `value`.
 
 ###### Parameters
 
 *   `value` (`string`) — content to search in
-*   `character` (`string`) — single character to look for
+*   `substring` (`string`) — substring to look for, typically one character
 
 ###### Returns
 
-`number` — count of most frequent adjacent `character`s in `value`.
-
-###### Throws
-
-*   `Error` — when `character` is not a single character string
+Count of most frequent adjacent `substring`s in `value` (`number`).
 
 ## Types
 
@@ -90,7 +86,7 @@ This package is safe.
 ## Related
 
 *   [`wooorm/ccount`](https://github.com/wooorm/ccount)
-    — count characters
+    — count the total number of `substring`s in `value`
 *   [`wooorm/direction`](https://github.com/wooorm/direction)
     — detect directionality: left-to-right, right-to-left, or neutral
 

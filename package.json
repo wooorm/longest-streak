@@ -1,7 +1,7 @@
 {
   "name": "longest-streak",
   "version": "3.0.1",
-  "description": "Count the longest repeating streak of a character",
+  "description": "Count the longest repeating streak of a substring",
   "license": "MIT",
   "keywords": [
     "count",
@@ -9,6 +9,7 @@
     "longest",
     "repeating",
     "streak",
+    "substring",
     "character"
   ],
   "repository": "wooorm/longest-streak",
